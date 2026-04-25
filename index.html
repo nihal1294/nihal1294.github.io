@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihal Rao I | Staff ML and AI Product Engineer</title>
+    <meta name="description"
+        content="Nihal Rao I is a Staff ML engineer building AI products, agentic systems, and production ML platforms.">
+    <meta name="author" content="Nihal Rao I">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nihal Rao I | Staff ML and AI Product Engineer">
+    <meta property="og:description"
+        content="AI products, agentic systems, and production ML at scale.">
+    <meta property="og:url" content="https://nihal1294.github.io">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/13083807?v=4">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230b1220'/%3E%3Ctext x='13' y='43' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%23f8fafc'%3ENR%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-soft: #eef6ff;
+            --ink: #0b1220;
+            --muted: #526174;
+            --faint: #77859a;
+            --line: #d9e2ee;
+            --line-strong: #9fb1c6;
+            --blue: #1d4ed8;
+            --blue-soft: #dbeafe;
+            --green: #087f5b;
+            --green-soft: #dff7eb;
+            --coral: #d9480f;
+            --code: #101828;
+            --max: 1120px;
+            --shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+        }
+
+        body {
+            margin: 0;
+            background:
+                linear-gradient(180deg, rgba(219, 234, 254, 0.72), rgba(248, 250, 252, 0) 360px),
+                var(--bg);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration-color: rgba(29, 78, 216, 0.35);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--blue);
+            text-decoration-color: var(--blue);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: -48px;
+            z-index: 30;
+            padding: 8px 12px;
+            background: var(--ink);
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(217, 226, 238, 0.86);
+            background: rgba(248, 250, 252, 0.88);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 750;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 6px;
+            background: var(--ink);
+            color: #fff;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 18px;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 650;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+        }
+
+        .resume-link {
+            padding: 8px 12px;
+            border: 1px solid var(--line-strong);
+            border-radius: 6px;
+            color: var(--ink);
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .hero {
+            padding: 76px 0 64px;
+            display: grid;
+            grid-template-columns: minmax(0, 700px) 360px;
+            gap: 56px;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        .eyebrow,
+        .label,
+        .tag,
+        .meta,
+        .kicker {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 750;
+            margin-bottom: 18px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            max-width: 720px;
+            margin-bottom: 24px;
+            font-size: clamp(3.2rem, 7vw, 5.75rem);
+            line-height: 0.98;
+            letter-spacing: -0.065em;
+        }
+
+        .lead {
+            max-width: 680px;
+            margin-bottom: 34px;
+            color: #253246;
+            font-size: clamp(1.14rem, 1.6vw, 1.35rem);
+            line-height: 1.45;
+            letter-spacing: -0.025em;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 15px;
+            border: 1px solid var(--line-strong);
+            border-radius: 6px;
+            background: var(--surface);
+            color: var(--ink);
+            font-weight: 750;
+            text-decoration: none;
+            transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            border-color: var(--blue);
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .button.primary {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: #fff;
+        }
+
+        .button.primary:hover {
+            color: #fff;
+            background: #153eaa;
+        }
+
+        .profile-panel {
+            width: 100%;
+            margin-top: 36px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .portrait {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 128px minmax(0, 1fr);
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .portrait img {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+        }
+
+        .portrait strong {
+            display: block;
+            font-size: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .portrait span {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .status-grid div {
+            min-height: 96px;
+            padding: 16px;
+            border-right: 1px solid var(--line);
+        }
+
+        .status-grid div:nth-child(2n) {
+            border-right: 0;
+        }
+
+        .status-grid div:nth-child(n + 3) {
+            border-top: 1px solid var(--line);
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--faint);
+            font-size: 11px;
+            font-weight: 750;
+        }
+
+        .status-grid strong {
+            display: block;
+            font-size: 20px;
+            line-height: 1.15;
+            letter-spacing: -0.035em;
+        }
+
+        .signal-strip {
+            padding: 18px;
+            background: var(--code);
+            color: #cbd5e1;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
+            font-size: 12px;
+        }
+
+        .signal-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .bars {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 4px;
+            align-items: end;
+            height: 46px;
+        }
+
+        .bars span {
+            display: block;
+            min-height: 8px;
+            border-radius: 2px 2px 0 0;
+            background: #93c5fd;
+            opacity: 0.92;
+        }
+
+        .bars span:nth-child(3n) {
+            background: #86efac;
+        }
+
+        .bars span:nth-child(4n) {
+            background: #fbbf24;
+        }
+
+        .bars .h22 {
+            height: 22%;
+        }
+
+        .bars .h54 {
+            height: 54%;
+        }
+
+        .bars .h38 {
+            height: 38%;
+        }
+
+        .bars .h72 {
+            height: 72%;
+        }
+
+        .bars .h46 {
+            height: 46%;
+        }
+
+        .bars .h86 {
+            height: 86%;
+        }
+
+        .bars .h34 {
+            height: 34%;
+        }
+
+        .bars .h62 {
+            height: 62%;
+        }
+
+        .bars .h28 {
+            height: 28%;
+        }
+
+        .bars .h76 {
+            height: 76%;
+        }
+
+        .bars .h48 {
+            height: 48%;
+        }
+
+        .bars .h91 {
+            height: 91%;
+        }
+
+        .bars .h42 {
+            height: 42%;
+        }
+
+        .bars .h57 {
+            height: 57%;
+        }
+
+        .bars .h31 {
+            height: 31%;
+        }
+
+        .bars .h67 {
+            height: 67%;
+        }
+
+        .bars .h37 {
+            height: 37%;
+        }
+
+        .bars .h82 {
+            height: 82%;
+        }
+
+        section {
+            padding: 74px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 34px;
+        }
+
+        .kicker {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        h2 {
+            margin-bottom: 14px;
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            line-height: 1.02;
+            letter-spacing: -0.055em;
+        }
+
+        .section-copy {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--line);
+        }
+
+        .proof {
+            min-height: 156px;
+            padding: 22px;
+            background: var(--surface);
+        }
+
+        .proof strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            line-height: 1;
+            letter-spacing: -0.055em;
+        }
+
+        .proof span {
+            color: var(--muted);
+        }
+
+        .story {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 54px;
+            align-items: start;
+        }
+
+        .story p {
+            color: #253246;
+            font-size: 18px;
+        }
+
+        .timeline {
+            border-left: 2px solid var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 28px 28px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 2px solid var(--blue);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 4px;
+            font-size: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .meta {
+            margin-bottom: 7px;
+            color: var(--faint);
+            font-size: 12px;
+            font-weight: 750;
+        }
+
+        .work-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .work-item {
+            display: grid;
+            grid-template-columns: 92px minmax(0, 1fr) 220px;
+            gap: 26px;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+        }
+
+        .work-item:hover {
+            border-color: var(--line-strong);
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .work-num {
+            color: var(--blue);
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .work-item h3 {
+            margin-bottom: 8px;
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.035em;
+        }
+
+        .work-item p {
+            margin-bottom: 16px;
+            color: var(--muted);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 5px 8px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--bg);
+            color: #41516a;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .metrics {
+            align-self: start;
+            display: grid;
+            gap: 10px;
+        }
+
+        .metric {
+            padding: 12px;
+            border-radius: 6px;
+            background: var(--surface-soft);
+        }
+
+        .metric.green {
+            background: var(--green-soft);
+        }
+
+        .metric.coral {
+            background: #fff1e8;
+        }
+
+        .metric strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 20px;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .metric span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .repo-card {
+            min-height: 250px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+        }
+
+        .repo-card h3 {
+            margin-bottom: 8px;
+            font-size: 24px;
+            letter-spacing: -0.035em;
+        }
+
+        .repo-card p {
+            color: var(--muted);
+        }
+
+        .repo-topline {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .repo-stat {
+            color: var(--faint);
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", ui-monospace, monospace;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .skill-group {
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+        }
+
+        .skill-group h3 {
+            margin-bottom: 12px;
+            font-size: 18px;
+            letter-spacing: -0.025em;
+        }
+
+        .skill-group ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+        }
+
+        .contact-band {
+            padding: 34px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+            gap: 42px;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .contact-band h2 {
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .contact-band p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .contact-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-links a {
+            min-height: 48px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            border-color: #93c5fd;
+            color: #bfdbfe;
+        }
+
+        footer {
+            padding: 34px 0 46px;
+            color: var(--faint);
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        @media (max-width: 920px) {
+            .hero,
+            .story,
+            .section-head,
+            .contact-band {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 64px;
+            }
+
+            .profile-panel {
+                margin-top: 0;
+                max-width: 520px;
+            }
+
+            .proof-grid,
+            .skill-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .work-item {
+                grid-template-columns: 68px minmax(0, 1fr);
+            }
+
+            .metrics {
+                grid-column: 2;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 48px 0 56px;
+                gap: 34px;
+            }
+
+            h1 {
+                font-size: clamp(3rem, 15vw, 4.4rem);
+            }
+
+            .lead {
+                font-size: 1.12rem;
+            }
+
+            section {
+                padding: 56px 0;
+            }
+
+            .portrait,
+            .status-grid,
+            .proof-grid,
+            .repo-grid,
+            .skill-grid,
+            .work-item,
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait img {
+                width: 144px;
+                height: 144px;
+            }
+
+            .status-grid div,
+            .status-grid div:nth-child(2n),
+            .status-grid div:nth-child(n + 3) {
+                border-right: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .status-grid div:first-child {
+                border-top: 0;
+            }
+
+            .work-item {
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .metrics {
+                grid-column: auto;
+            }
+
+            .contact-band {
+                padding: 24px;
+                min-width: 0;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <a class="brand" href="#top" aria-label="Nihal Rao home">
+                <span class="brand-mark">NR</span>
+                <span>Nihal Rao I</span>
+            </a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#open-source">Open Source</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a class="resume-link" href="https://drive.google.com/file/d/1yZPDvidH-TzhwDWMedEB7UIBciwynO-k/view?usp=sharing">Resume</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="wrap" id="top">
+            <header class="hero">
+                <div>
+                    <p class="eyebrow">Staff ML engineer | AI products | Agentic systems</p>
+                    <h1>I build production AI products.</h1>
+                    <p class="lead">
+                        Staff-level ML engineer in Bengaluru with 8+ years across agentic AI,
+                        AI product platforms, production ML systems, and edge computer vision. At SolarWinds,
+                        I work in the Platform ML Team under Platform Engineering, building AI capabilities
+                        for ITOM and ITSM products across SaaS and self-hosted deployments.
+                    </p>
+                    <div class="actions" role="group" aria-label="Primary links">
+                        <a class="button primary" href="#work">Selected work</a>
+                        <a class="button" href="https://github.com/nihal1294">GitHub</a>
+                        <a class="button" href="https://linkedin.com/in/nihaliddya">LinkedIn</a>
+                        <a class="button" href="mailto:nihaliddya@gmail.com">Email</a>
+                    </div>
+                </div>
+
+                <aside class="profile-panel" aria-label="Profile summary">
+                    <div class="portrait">
+                        <img src="https://drive.google.com/thumbnail?id=1Oi9Zb00o0vxNZhtZuqTNFt-a8xKW9VI4&amp;sz=w1024" alt="Nihal Rao I"
+                            width="128" height="150">
+                        <div>
+                            <strong>Nihal Rao I</strong>
+                            <span>Staff Machine Learning Engineer building AI products from Bengaluru, India.</span>
+                        </div>
+                    </div>
+                    <div class="status-grid">
+                        <div>
+                            <span class="label">Current focus</span>
+                            <strong>Agentic AI products</strong>
+                        </div>
+                        <div>
+                            <span class="label">Operating scale</span>
+                            <strong>10M+ daily calls</strong>
+                        </div>
+                        <div>
+                            <span class="label">Core lane</span>
+                            <strong>AI products + ML systems</strong>
+                        </div>
+                        <div>
+                            <span class="label">Target roles</span>
+                            <strong>Staff / Senior Staff</strong>
+                        </div>
+                    </div>
+                    <div class="signal-strip">
+                        <div class="signal-line">
+                            <span>prod.ai.workflow</span>
+                            <span>150 rps</span>
+                        </div>
+                        <div class="bars" aria-hidden="true">
+                            <span class="h22"></span>
+                            <span class="h54"></span>
+                            <span class="h38"></span>
+                            <span class="h72"></span>
+                            <span class="h46"></span>
+                            <span class="h86"></span>
+                            <span class="h34"></span>
+                            <span class="h62"></span>
+                            <span class="h28"></span>
+                            <span class="h76"></span>
+                            <span class="h48"></span>
+                            <span class="h91"></span>
+                            <span class="h42"></span>
+                            <span class="h57"></span>
+                            <span class="h31"></span>
+                            <span class="h67"></span>
+                            <span class="h37"></span>
+                            <span class="h82"></span>
+                        </div>
+                    </div>
+                </aside>
+            </header>
+        </div>
+
+        <section aria-labelledby="proof-heading">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="kicker">Proof points</p>
+                    <div>
+                        <h2 id="proof-heading">The pattern is AI product ownership.</h2>
+                        <p class="section-copy">
+                            My strongest work sits where AI ideas have to become real product systems:
+                            workflows, APIs, auth, rate limits, evals, dashboards, SLOs, docs, and on-call ownership.
+                        </p>
+                    </div>
+                </div>
+                <div class="proof-grid">
+                    <div class="proof">
+                        <strong>100%</strong>
+                        <span>of engineering LLM traffic routed through an org-wide LiteLLM gateway.</span>
+                    </div>
+                    <div class="proof">
+                        <strong>5+</strong>
+                        <span>product lines aligned around an AI copilot that started as a hackathon prototype.</span>
+                    </div>
+                    <div class="proof">
+                        <strong>10-15M</strong>
+                        <span>metric anomaly detection requests per day for entity health and alert noise reduction.</span>
+                    </div>
+                    <div class="proof">
+                        <strong>$0.00001</strong>
+                        <span>approximate cost per request on the anomaly detection service.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="story-heading">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="kicker">Profile</p>
+                    <div>
+                        <h2 id="story-heading">AI products, agentic systems, and production ML.</h2>
+                    </div>
+                </div>
+                <div class="story">
+                    <div>
+                        <p>
+                            I work at SolarWinds, an ITOM/ITSM company that builds observability, monitoring,
+                            and service-management products across SaaS and self-hosted deployments. I sit in
+                            the Platform ML Team under Platform Engineering, where I originated and drive an AI
+                            copilot strategy across multiple product lines. The work spans multi-agent
+                            orchestration, MCP-based tool integration, RAG, SSE APIs, conversation management,
+                            reliability, and evaluation.
+                        </p>
+                        <p>
+                            Before the current AI product work, I built AIOps systems for metric anomaly detection,
+                            alert noise reduction, RCA signal correlation, and log processing. Earlier roles
+                            covered retail edge computer vision at Infilect and CV/ML R&amp;D at Tata Elxsi.
+                        </p>
+                    </div>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <p class="meta">Apr 2024 - Present | SolarWinds, Platform Engineering / Platform ML</p>
+                            <h3>Staff Machine Learning Engineer</h3>
+                            <p>AI copilot originator and DRI, org-wide LLM gateway owner, investigative agent contributor.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="meta">Feb 2022 - Mar 2024 | SolarWinds, Platform ML / AIOps</p>
+                            <h3>Senior Machine Learning Engineer</h3>
+                            <p>AIOps, service-desk AI, metric anomaly detection, RCA correlation, log pattern mining.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="meta">Jun 2020 - Feb 2022 | Infilect</p>
+                            <h3>Senior AI Engineer / AI Engineer</h3>
+                            <p>TensorFlow Lite pipelines, retail loss detection, SKU recognition, image stitching.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="meta">Oct 2017 - May 2020 | Tata Elxsi</p>
+                            <h3>Senior Software Engineer / Software Engineer</h3>
+                            <p>Computer vision R&amp;D for traffic-sign recognition, lane recognition, text detection, and video metadata.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" aria-labelledby="work-heading">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="kicker">Selected work</p>
+                    <div>
+                        <h2 id="work-heading">AI products with clear operating constraints.</h2>
+                        <p class="section-copy">
+                            These are not toy demos. The through-line is turning AI capability into useful
+                            product experiences with the service boundaries, controls, and feedback loops
+                            needed to operate them.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-list">
+                    <article class="work-item">
+                        <div class="work-num">01</div>
+                        <div>
+                            <h3>AI Copilot for SolarWinds Products</h3>
+                            <p>
+                                Conceived and prototyped a multi-agent AI copilot in a one-week internal
+                                hackathon, then drove it into central product strategy across 5+ ITOM/ITSM
+                                product lines. Designed the agent framework, MCP tool layer, conversation APIs,
+                                RAG layer, SSE streaming contracts, and evaluation tooling.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Agentic AI</span>
+                                <span class="tag">MCP</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">SSE</span>
+                                <span class="tag">SLOs</span>
+                            </div>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <strong>5+ lines</strong>
+                                <span>product strategy impact</span>
+                            </div>
+                            <div class="metric green">
+                                <strong>5+ clients</strong>
+                                <span>conversation API consumers</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-num">02</div>
+                        <div>
+                            <h3>Org-Wide LLM Gateway</h3>
+                            <p>
+                                Built and continue to own a centralized provider-agnostic LLM proxy on LiteLLM.
+                                It handles auth, model policy, distributed Redis rate limiting, Presidio-based
+                                PII masking, audit logs, spend governance, metrics, and client
+                                onboarding for engineering teams.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">LiteLLM</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">Presidio</span>
+                            </div>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <strong>100%</strong>
+                                <span>engineering LLM traffic</span>
+                            </div>
+                            <div class="metric green">
+                                <strong>20+ teams</strong>
+                                <span>feature consumers</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-num">03</div>
+                        <div>
+                            <h3>Metric Anomaly Detection and Alert Noise Reduction</h3>
+                            <p>
+                                Shipped a time-series metric anomaly detection service that forecasted expected
+                                metric behavior to understand entity health and reduce alert noise. The service
+                                ran at roughly 10-15M requests per day, around 150 RPS, with an approximate
+                                per-request cost of one hundred-thousandth of a US dollar.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Time series</span>
+                                <span class="tag">Anomaly detection</span>
+                                <span class="tag">Fourier</span>
+                                <span class="tag">RWD</span>
+                                <span class="tag">Prophet</span>
+                            </div>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric coral">
+                                <strong>10-15M</strong>
+                                <span>requests per day</span>
+                            </div>
+                            <div class="metric">
+                                <strong>~150</strong>
+                                <span>requests per second</span>
+                            </div>
+                            <div class="metric green">
+                                <strong>major</strong>
+                                <span>alert noise reduction</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-num">04</div>
+                        <div>
+                            <h3>Drain3 Log Pattern Mining</h3>
+                            <p>
+                                Built log processing systems around Drain3 template mining to compress repetitive
+                                logs, surface unusual log patterns, and select higher-signal context for LLM-driven
+                                incident analysis. The goal was smaller context windows with more diagnostic value,
+                                not clustering for its own sake.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Drain3</span>
+                                <span class="tag">Log mining</span>
+                                <span class="tag">Compression</span>
+                                <span class="tag">LLM context</span>
+                                <span class="tag">AIOps</span>
+                            </div>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <strong>lower</strong>
+                                <span>context size</span>
+                            </div>
+                            <div class="metric green">
+                                <strong>higher</strong>
+                                <span>signal density</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-num">05</div>
+                        <div>
+                            <h3>AI Service-Desk Agent</h3>
+                            <p>
+                                Co-designed and built an LLM/RAG-powered assistant for ITSM: recommended
+                                resolutions, ticket summaries, and actionable runbooks from process documentation.
+                                Supported PII-safe routing with on-demand and auto-trigger modes.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">RAG</span>
+                                <span class="tag">ITSM</span>
+                                <span class="tag">Runbooks</span>
+                                <span class="tag">PII safety</span>
+                            </div>
+                        </div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <strong>150K</strong>
+                                <span>tickets per day</span>
+                            </div>
+                            <div class="metric green">
+                                <strong>40-50%</strong>
+                                <span>MTTR reduction</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="open-source" aria-labelledby="oss-heading">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="kicker">Open source</p>
+                    <div>
+                        <h2 id="oss-heading">Public repos that match the work.</h2>
+                        <p class="section-copy">
+                            I kept this section grounded in my public GitHub repositories rather than
+                            presenting private company work as open source.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <article class="repo-card">
+                        <div>
+                            <div class="repo-topline">
+                                <p class="meta">Python | MCP | OpenAPI</p>
+                                <span class="repo-stat">1 star</span>
+                            </div>
+                            <h3><a href="https://github.com/nihal1294/openapi-to-mcp">openapi-to-mcp</a></h3>
+                            <p>
+                                Installable CLI for diagnosing, diffing, generating, running, and testing
+                                Node.js/TypeScript MCP servers from OpenAPI specs.
+                            </p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">CLI</span>
+                            <span class="tag">Docs site</span>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <div>
+                            <div class="repo-topline">
+                                <p class="meta">Python | React | Voice AI</p>
+                                <span class="repo-stat">2026</span>
+                            </div>
+                            <h3><a href="https://github.com/nihal1294/volta">volta</a></h3>
+                            <p>
+                                Local realtime voice app for low-latency STT to LLM to TTS conversations,
+                                persona control, saved runs, and a browser evaluation harness on Apple Silicon.
+                            </p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Vite</span>
+                            <span class="tag">Realtime</span>
+                            <span class="tag">Evaluation</span>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <div>
+                            <div class="repo-topline">
+                                <p class="meta">Python | OR-Tools | Scheduling</p>
+                                <span class="repo-stat">Apache 2.0</span>
+                            </div>
+                            <h3><a href="https://github.com/nihal1294/chronosolve">chronosolve</a></h3>
+                            <p>
+                                Generalized university timetable solver using constraint optimization with
+                                configurable hard constraints, soft preferences, YAML/JSON input, and a planned
+                                desktop UI.
+                            </p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">CP-SAT</span>
+                            <span class="tag">Pydantic</span>
+                            <span class="tag">Typer</span>
+                            <span class="tag">Tauri planned</span>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <div>
+                            <div class="repo-topline">
+                                <p class="meta">Python | PyQt5 | Scheduling</p>
+                                <span class="repo-stat">28 stars | 9 forks</span>
+                            </div>
+                            <h3><a href="https://github.com/nihal1294/timetable">timetable</a></h3>
+                            <p>
+                                Earlier university timetable generator for a highly constrained NP-hard scheduling
+                                problem, built as a Python desktop application during engineering.
+                            </p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Python 3</span>
+                            <span class="tag">PyQt5</span>
+                            <span class="tag">Heuristics</span>
+                            <span class="tag">Education</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="kicker">Skills</p>
+                    <div>
+                        <h2 id="skills-heading">Tools I use when an AI prototype has to become a product.</h2>
+                    </div>
+                </div>
+                <div class="skill-grid">
+                    <article class="skill-group">
+                        <h3>AI product engineering</h3>
+                        <ul>
+                            <li>Agentic workflows, product copilots, AI assistants</li>
+                            <li>Conversation APIs, SSE streaming, UX-facing AI systems</li>
+                            <li>Evaluation loops, guardrails, reliability, launch readiness</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3>LLM and platform systems</h3>
+                        <ul>
+                            <li>MCP, LangGraph, LiteLLM, RAG, provider routing</li>
+                            <li>AWS Bedrock, Azure OpenAI, PII masking, audit controls</li>
+                            <li>Kubernetes, Docker, Helm, Terraform, ArgoCD</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3>Production ML systems</h3>
+                        <ul>
+                            <li>Python, FastAPI, REST/OpenAPI, SSE streaming</li>
+                            <li>Redis, PostgreSQL, Kafka, Prometheus, OpenTelemetry</li>
+                            <li>Metric anomaly detection, CV/edge ML, LoRA</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="wrap">
+                <div class="contact-band">
+                    <div>
+                        <p class="kicker">Contact</p>
+                        <h2 id="contact-heading">Tell me about the system you are trying to ship.</h2>
+                        <p>
+                            Best fit: Staff or Senior Staff IC roles building AI products, agentic workflows,
+                            AI-assisted developer or customer experiences, and ML systems that need to operate
+                            reliably at scale.
+                        </p>
+                    </div>
+                    <div class="contact-links">
+                        <a href="mailto:nihaliddya@gmail.com"><span>Email</span><strong>nihaliddya@gmail.com</strong></a>
+                        <a href="https://github.com/nihal1294"><span>GitHub</span><strong>@nihal1294</strong></a>
+                        <a href="https://linkedin.com/in/nihaliddya"><span>LinkedIn</span><strong>/in/nihaliddya</strong></a>
+                        <a href="https://drive.google.com/file/d/1yZPDvidH-TzhwDWMedEB7UIBciwynO-k/view?usp=sharing"><span>Resume</span><strong>Google Drive</strong></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <span>Copyright 2026 Nihal Rao I</span>
+            <span>Static HTML/CSS, ready for GitHub Pages.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
